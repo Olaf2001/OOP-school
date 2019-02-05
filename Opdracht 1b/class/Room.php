@@ -1,4 +1,5 @@
 <?php
+
 class Room
 {
     private $width;

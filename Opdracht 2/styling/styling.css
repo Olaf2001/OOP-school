@@ -1,0 +1,45 @@
+.circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+.square {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+}
+
+.rectangle {
+    width: 100px;
+    height: 50px;
+    margin: 10px;
+}
+
+.triangle {
+    clip-path: polygon(50% 0, 0 100%, 100% 100%);
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+}
+
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.green {
+    background-color: greenyellow;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.black {
+    background-color: #111;
+}

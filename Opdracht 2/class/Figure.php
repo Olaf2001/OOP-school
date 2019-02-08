@@ -6,20 +6,19 @@ abstract class Figure
 
     public function __construct($color)
     {
-        $this->color = $color;
-    }
+        $this->arrayColor = array('red','blue','green','yellow');
 
-    public function getColor()
-    {
-        $this->arrayColor = array('red','blue','white');
-
-        for($loop = 0; $loop<count.$this->arrayColor; $loop++)
+        foreach($this->arrayColor as $value)
         {
-            if($this->color == $this->arrayColor)
+            if($color == $value)
             {
-                return $this->color;
+                $this->color = $color;
             }
         }
+        if($this->color == null)
+        {
+            $this->color = 'black';
+        }       
     }
 
     abstract public function getFigure();

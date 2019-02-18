@@ -2,18 +2,25 @@
 
 namespace OOP_basis;
 
- // abstract
-class Product
+abstract class Product
 {
-    private $product;
+    private $productName;
+    private $purchasePrice;
+    private $VAT;
+    private $description;
 
-    public function __construct($product)
+    public function __construct($productName, $purchasePrice, $VAT, $description)
     {
-        $this->product = $product;
+        $this->productName = $productName;
+        $this->purchasePrice = $purchasePrice;
+        $this->VAT = $VAT;
+        $this->description = $description;
     }
 
-    public function getProduct()
+    public function getBasicProduct()
     {
-        return $this->product;
+        return $this->productName. $this->purchasePrice. $this->VAT. $this->description;
     }
+
+    abstract public function getProduct();
 }

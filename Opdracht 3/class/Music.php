@@ -4,15 +4,17 @@ namespace OOP_basis;
 
 class Music extends Product
 {
-    public function __construct($productName, $purchasePrice, $VAT, $description)
+    public function __construct($productName, $purchasePrice, $earnPercentage)
     {
-        parent::__construct($productName, $purchasePrice, $VAT, $description);
+        parent::__construct($productName, $purchasePrice, $earnPercentage);
+
+        $this->category = 'music';
     }
 
     public function getProduct()
     {
-        parent::getBasicProduct();
-
-        return parent::getBasicProduct()->$this->productName;
+        return parent::getBasicProduct().
+                '<td>'.$this->category.'</td>
+                <tr>';
     }
 }

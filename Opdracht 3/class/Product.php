@@ -9,17 +9,21 @@ abstract class Product
     private $VAT;
     private $description;
 
-    public function __construct($productName, $purchasePrice, $VAT, $description)
+    public function __construct($productName, $purchasePrice, $earnPercentage)
     {
         $this->productName = $productName;
         $this->purchasePrice = $purchasePrice;
-        $this->VAT = $VAT;
-        $this->description = $description;
+        $this->earnPercentage = $earnPercentage;
+        $this->VAT = 0.21 * $this->purchasePrice;
+        $this->sellingPrice = $purchasePrice * ($this->earnPercentage / 100 + 1) + $this->VAT;
+        
     }
 
-    public function getBasicProduct()
+    protected function getBasicProduct()
     {
-        return $this->productName. $this->purchasePrice. $this->VAT. $this->description;
+        return '<tr>
+                    <td>'.$this->productName.'</td>
+                    <td>'.$this->sellingPrice.'</td>';    
     }
 
     abstract public function getProduct();

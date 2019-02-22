@@ -23,43 +23,36 @@ include 'vendor/autoload.php';
 use OOP_basis\Music;
 use OOP_basis\Film;
 use OOP_basis\Game;
+use OOP_basis\ProductList;
 
-$produt1 = new Music('Mooie muziek naam', 20 , 20);
-$produt2 = new Game('Ik speel een spel', 50 , 100);
-$produt3 = new Film('Mooiste film ooit', 30 , 50);
-$produt4 = new Game('Helaas altijd verloren', 20 , 70);
-$produt5 = new Music('Ik kan niet zingen', 15 , 40);
-$produt6 = new Game('Gamen is zo fijn, dat maakt mij vrolijk gelukkig en blij', 60 , 150);
-$produt7 = new Film('Avatar', 20 , 90);
-$produt8 = new Film('Titanic', 15 , 30);
-$produt9 = new Music('Test van Zoute Pinda', 25 , 10);
-$produt10 = new Music('Flip de Beer', 17 , 45);
+$productList1 = new ProductList();
+
+
+$product1 = new Music('Mooie muziek naam', 20 , 20);
+$product2 = new Game('Ik speel een spel', 50 , 100);
+$product3 = new Film('Mooiste film ooit', 30 , 50);
+$product4 = new Game('Helaas altijd verloren', 20 , 70);
+$product5 = new Music('Ik kan niet zingen', 15 , 40);
+$product6 = new Game('Gamen is zo fijn, dat maakt mij vrolijk gelukkig en blij', 60 , 150);
+$product7 = new Film('Avatar', 20 , 90);
+$product8 = new Film('Titanic', 15 , 30);
+$product9 = new Music('Test van Zoute Pinda', 25 , 10);
+$product10 = new Music('Flip de Beer', 17 , 45);
+
+$productList1->addProductToList($product1->getProduct());
+$productList1->addProductToList($product2->getProduct());
+$productList1->addProductToList($product3->getProduct());
+$productList1->addProductToList($product4->getProduct());
+$productList1->addProductToList($product5->getProduct());
+$productList1->addProductToList($product6->getProduct());
+$productList1->addProductToList($product7->getProduct());
+$productList1->addProductToList($product8->getProduct());
+$productList1->addProductToList($product9->getProduct());
+$productList1->addProductToList($product10->getProduct());
+
+print $productList1->getProductList();
 
 ?>
-
-<table border="1">
-    <thead>
-        <tr>
-            <th>Product Naam</th>
-            <th>Verkoopprijs</th>
-            <th>Categorie</th>
-        </tr>
-    </thead>
-    <tbody>
-        <?php
-        print $produt1->getProduct();
-        print $produt2->getProduct();
-        print $produt3->getProduct();
-        print $produt4->getProduct();
-        print $produt5->getProduct();
-        print $produt6->getProduct();
-        print $produt7->getProduct();
-        print $produt8->getProduct();
-        print $produt9->getProduct();
-        print $produt10->getProduct();
-        ?>
-    </tbody>
-<table/>
 </body>
 </html>
 

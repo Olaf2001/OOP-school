@@ -4,6 +4,9 @@ namespace OOP_basis;
 
 class Music extends Product
 {
+    private $productName;
+    private $purchasePrice;
+    private $earnPercentage;
     public function __construct($productName, $purchasePrice, $earnPercentage)
     {
         parent::__construct($productName, $purchasePrice, $earnPercentage);
@@ -13,8 +16,6 @@ class Music extends Product
 
     public function getProduct()
     {
-        return parent::getBasicProduct().
-                '<td>'.$this->category.'</td>
-                <tr>';
+        return array($this->$productName. $this->sellingPrice .$this->category);
     }
 }

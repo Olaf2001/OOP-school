@@ -20,6 +20,12 @@ class ProductList
             $print .= $product->getProduct()."<br>";
         }
 
-        return '<table border="1">'.$print.'</table>';
+        return '<table border="1">
+                    <tr>
+                        <th>Product Naam</th>
+                        <th>Verkoopprijs</th>
+                        <th>Categorie</th>'
+                    .$print.
+                '</table>';
     }
 }

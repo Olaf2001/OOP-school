@@ -10,11 +10,4 @@ class Music extends Product
 
         $this->category = 'music';
     }
-
-    public function getProduct()
-    {
-        return parent::getBasicProduct().
-                '<td>'.$this->category.'</td>
-                <tr>';
-    }
 }

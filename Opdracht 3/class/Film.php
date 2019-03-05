@@ -10,11 +10,4 @@ class Film extends Product
 
         $this->category = 'film';
     }
-
-    public function getProduct()
-    {
-        return parent::getBasicProduct().
-                '<td>'.$this->category.'</td>
-                <tr>';
-    }
 }

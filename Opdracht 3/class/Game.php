@@ -10,11 +10,4 @@ class Game extends Product
 
         $this->category = 'game';
     }
-
-    public function getProduct()
-    {
-        return parent::getBasicProduct().
-                '<td>'.$this->category.'</td>
-                <tr>';
-    }   
 }

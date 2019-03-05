@@ -39,18 +39,18 @@ $product8 = new Film('Titanic', 15 , 30);
 $product9 = new Music('Test van Zoute Pinda', 25 , 10);
 $product10 = new Music('Flip de Beer', 17 , 45);
 
-$productList1->addProductToList($product1->getProduct());
-$productList1->addProductToList($product2->getProduct());
-$productList1->addProductToList($product3->getProduct());
-$productList1->addProductToList($product4->getProduct());
-$productList1->addProductToList($product5->getProduct());
-$productList1->addProductToList($product6->getProduct());
-$productList1->addProductToList($product7->getProduct());
-$productList1->addProductToList($product8->getProduct());
-$productList1->addProductToList($product9->getProduct());
-$productList1->addProductToList($product10->getProduct());
+$productList1->addProduct($product1);
+$productList1->addProduct($product2);
+$productList1->addProduct($product3);
+$productList1->addProduct($product4);
+$productList1->addProduct($product5);
+$productList1->addProduct($product6);
+$productList1->addProduct($product7);
+$productList1->addProduct($product8);
+$productList1->addProduct($product9);
+$productList1->addProduct($product10);
 
-print $productList1->getProductList();
+print $productList1->getProducts();
 
 ?>
 </body>

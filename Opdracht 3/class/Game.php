@@ -15,8 +15,9 @@ class Game extends Product
         $this->category = 'game';
     }
 
-    public function getProduct()
+    public function getName()
     {
-        return array($this->$productName. $this->sellingPrice. $this->category);
+        parent::getName();
     }
+    
 }

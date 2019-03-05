@@ -17,5 +17,8 @@ abstract class Product
         $this->sellingPrice = $purchasePrice * ($this->earnPercentage / 100 + 1) + $this->VAT;    
     }
 
-    abstract public function getProduct();
+    public function getName()
+    {
+        return $this->$productName;
+    }
 }

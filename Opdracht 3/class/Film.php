@@ -15,8 +15,8 @@ class Film extends Product
         $this->category = 'film';
     }
 
-    public function getProduct()
+    public function getName()
     {
-        return array($this->$productName. $this->sellingPrice .$this->category);
+        parent::getName();
     }
 }

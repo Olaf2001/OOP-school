@@ -7,6 +7,7 @@ class Music extends Product
     private $productName;
     private $purchasePrice;
     private $earnPercentage;
+
     public function __construct($productName, $purchasePrice, $earnPercentage)
     {
         parent::__construct($productName, $purchasePrice, $earnPercentage);
@@ -14,8 +15,8 @@ class Music extends Product
         $this->category = 'music';
     }
 
-    public function getProduct()
+    public function getName()
     {
-        return array($this->$productName. $this->sellingPrice .$this->category);
+        parent::getName();
     }
 }

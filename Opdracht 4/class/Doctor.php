@@ -9,9 +9,18 @@ class Doctor extends Staff
         $this->role = 'doctor';
     }
 
-    public function setSalary($salaryHour, $appointmentHour)
+    public function addAppointment($appointmentTime)
     {
-        $this->salary = $salaryHour * $appointmentHour;
+        parent::addAppointment($appointmentTime);
+    }
+
+    public function setSalary($salaryHour)
+    {
+        $this->salary = $salaryHour * array_sum($this->appointmentTotalTime);
     }
     
+    public function getSalary()
+    {
+        return $this->salary;
+    }
 }

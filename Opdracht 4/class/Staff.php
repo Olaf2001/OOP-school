@@ -5,7 +5,13 @@ namespace OOP_basis;
 abstract class Staff extends Person
 {
     protected $salaryHour;
-    protected $appointmentHour;
+    protected $appointmentTime;
+    protected $appointmentTotalTime = [];
 
-    abstract public function setSalary($salaryHour, $appointmentHour);
+    public function addAppointment($appointmentTime)
+    {
+        $this->appointmentTotalTime[] = $appointmentTime;
+    }
+
+    abstract public function setSalary($salaryHour);
 }

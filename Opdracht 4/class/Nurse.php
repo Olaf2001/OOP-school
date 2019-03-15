@@ -7,10 +7,15 @@ class Nurse extends Staff
     public function setRole()
     {
         $this->role = 'nurse';
-    }  
-    
-    public function setSalary($salaryHour, $appointmentHour)
+    }
+
+    public function addAppointment($appointmentTime)
     {
-        $this->salary = $salaryHour * 40 + $appointmentHour * $salaryHour;
+        parent::addAppointment($appointmentTime);
+    }
+    
+    public function setSalary($salaryHour)
+    {
+        $this->salary = $salaryHour * 40 + $this->appointmentTotalTime * $salaryHour;
     }
 }

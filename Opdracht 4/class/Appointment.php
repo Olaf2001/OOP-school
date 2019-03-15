@@ -4,7 +4,6 @@ namespace OOP_basis;
 
 class Appointment
 {
-    // een functie om een nurse, doctor en patient toe te voegen aan de afspraak :)
     private $doctor;
     private $patient;
     private $startTimeHour;
@@ -12,33 +11,33 @@ class Appointment
     private $endTimeHour;
     private $endTimeMinutes;
     private $nurse;
+    private $startTime;
+    private $endTime;
 
     public function __construct($doctor, $patient, $nurse = '')
     {
         $this->doctor = $doctor;
         $this->patient = $patient;
         $this->nurse = $nurse;
-        // $this->timeDifference = $startTime->diff($endTime); tijden lukken nog even niet
     }
 
-    public function setTime($startTimeHour, $startTimeMinutes , $endTimeHour, $endTimeMinutes)
+    public function setTime($startTime, $endTime)
     {
-     $this->startTime = date("h:i", mktime($startTimeHour, $startTimeMinutes));
-     $this->endTime = date("h:i", mktime($endTimeHour, $endTimeMinutes));
+        $this->startTime = $startTime;
+        $this->endTime = $endTime;
     }
     
-    public function getTime()
+    public function getTimeInterval()
     {
-        $time = date_diff($this->endTime, $this->startTime) ;
+        $this->timeInterval = (strtotime($this->endTime) - strtotime($this->startTime)) / 3600;
 
-        return $this->startTime.'<br>'.$this->endTime.'<br>'.$time;
+        return $this->timeInterval;
     }
+
     public function getPersons()
     {
         return $this->doctor.'<br>'.$this->patient.'<br>'.$this->nurse.'<br>';
-        // .$this->startTime.'<br>'.$this->endTime;
     }
-
 }
 
 // geen idee hoe je static moet gebruiken want het moet juist dynamisch worden en daar gebruik je geen static voor

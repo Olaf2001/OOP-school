@@ -21,9 +21,10 @@ abstract class Person
         $this->weight = $weight;
     }
 
-    public function seePerson()
+    public function getPerson()
     {
-        return $this->firstname. $this->lastname;
+        $this->setRole();
+        return $this->role.' <i>'.$this->firstname.' '.$this->lastname.'</i>';
     }
 
     abstract public function setRole();

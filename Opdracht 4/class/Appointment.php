@@ -6,15 +6,11 @@ class Appointment
 {
     private $doctor;
     private $patient;
-    private $startTimeHour;
-    private $startTimeMinutes;
-    private $endTimeHour;
-    private $endTimeMinutes;
     private $nurse;
     private $startTime;
     private $endTime;
 
-    public function __construct($doctor, $patient, $nurse = '')
+    public function __construct($doctor, $patient, $nurse = 'geen assistent bij deze afspraak')
     {
         $this->doctor = $doctor;
         $this->patient = $patient;
@@ -34,9 +30,14 @@ class Appointment
         return $this->timeInterval;
     }
 
-    public function getPersons()
+    public function getAppointment()
     {
-        return $this->doctor.'<br>'.$this->patient.'<br>'.$this->nurse.'<br>';
+        return  '<strong>Afspraak</strong><br>'
+                .$this->doctor.'<br>'
+                .$this->patient.'<br>'
+                .$this->nurse.'<br>
+                starttijd<i>'.$this->startTime.'</i><br>
+                eindtijd<i>'.$this->endTime.'</i>';
     }
 }
 

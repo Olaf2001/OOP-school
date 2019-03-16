@@ -14,13 +14,8 @@ class Doctor extends Staff
         parent::addAppointment($appointmentTime);
     }
 
-    public function setSalary($salaryHour)
+    public function calculateSalary()
     {
-        $this->salary = $salaryHour * array_sum($this->appointmentTotalTime);
-    }
-    
-    public function getSalary()
-    {
-        return $this->salary;
+        $this->salary = $this->salaryHour * array_sum($this->appointmentTotalTime);
     }
 }

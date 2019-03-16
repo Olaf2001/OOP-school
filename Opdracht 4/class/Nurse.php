@@ -14,8 +14,8 @@ class Nurse extends Staff
         parent::addAppointment($appointmentTime);
     }
     
-    public function setSalary($salaryHour)
+    public function calculateSalary()
     {
-        $this->salary = $salaryHour * 40 + $this->appointmentTotalTime * $salaryHour;
+        $this->salary = $this->salaryHour * 40 + array_sum($this->appointmentTotalTime) * $this->salaryHour;
     }
 }

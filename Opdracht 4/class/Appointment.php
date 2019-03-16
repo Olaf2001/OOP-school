@@ -36,9 +36,7 @@ class Appointment
                 .$this->doctor.'<br>'
                 .$this->patient.'<br>'
                 .$this->nurse.'<br>
-                starttijd<i>'.$this->startTime.'</i><br>
-                eindtijd<i>'.$this->endTime.'</i>';
+                starttijd <i>'.$this->startTime.'</i><br>
+                eindtijd <i>'.$this->endTime.'</i>';
     }
 }
-
-// geen idee hoe je static moet gebruiken want het moet juist dynamisch worden en daar gebruik je geen static voor

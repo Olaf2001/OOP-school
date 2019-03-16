@@ -47,7 +47,6 @@ $nurse1->addAppointment($appointment2->getTimeInterval());
 $nurse1->addAppointment($appointment5->getTimeInterval());
 $nurse2->addAppointment($appointment3->getTimeInterval());
 
-
 print $appointment1->getAppointment(). '<br>';
 print $appointment2->getAppointment(). '<br>';
 print $appointment3->getAppointment(). '<br>';

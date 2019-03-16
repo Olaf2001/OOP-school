@@ -27,5 +27,5 @@ abstract class Person
         return $this->role.' <i>'.$this->firstname.' '.$this->lastname.'</i>';
     }
 
-    abstract public function setRole();
+    abstract protected function setRole();
 }

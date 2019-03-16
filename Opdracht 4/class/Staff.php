@@ -5,7 +5,7 @@ namespace OOP_basis;
 abstract class Staff extends Person
 {
     protected $salaryHour;
-    protected $appointmentTime;
+    private $appointmentTime;
     protected $appointmentTotalTime = [];
 
     public function __construct($firstname, $lastname, $eyeColor, $hairColor, $length, $weight, $salaryHour) {
@@ -26,5 +26,5 @@ abstract class Staff extends Person
         return parent::getPerson().' krijgt een salaris van &euro; '.$this->salary;
     }
 
-    abstract public function calculateSalary();
+    abstract protected function calculateSalary();
 }

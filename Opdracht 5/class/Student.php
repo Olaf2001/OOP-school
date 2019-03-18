@@ -19,6 +19,11 @@ class Student extends Person
 
     public function getPayment()
     {
-        return $paid;
+        return $this->paid;
+    }
+
+    public function getGroup()
+    {
+        return $this->className;
     }
 }

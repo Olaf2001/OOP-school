@@ -7,7 +7,7 @@ class Group
     private $name;
     private $group = [];
 
-    public function construct($name)
+    public function __construct($name)
     {
         $this->name = $name;
     }
@@ -17,9 +17,20 @@ class Group
         $this->group[] = $student;
     }
 
-    public function getGroup()
+    public function getGroupName()
     {
-        return $this->name. '<br>' .$this->group;
+        return $this->name;
     }
 
+    public function getGroup()
+    {
+        $print = '';
+
+        foreach ($this->group as $student)
+        {
+            $print .= $student->getName()."<br>";
+        }
+
+        return $this->name. '<br>' .$print;
+    }
 }

@@ -18,11 +18,11 @@ $student1->setPayment(10);
 $group1 = new Group('APM2A');
 
 $group1->addStudent($student1);
-$student1->addGroup($group1);
+$student1->addGroup($group1->getGroupName());
 $group1->addStudent($student2);
-$student2->addGroup($group1);
+$student2->addGroup($group1->getGroupName());
 $group1->addStudent($student3);
-$student3->addGroup($group1);
+$student3->addGroup($group1->getGroupName());
 
 $teacher1 = new Teacher('Jan','Slim');
 
@@ -30,9 +30,12 @@ $schooltripList1 = new SchooltripList();
 $schooltripList1->addStudent($student1);
 $schooltripList1->addStudent($student2);
 $schooltripList1->addStudent($student3);
-$schooltripList1->addTeacher($teacher1);
+$schooltripList1->addTeacher($teacher1->getName());
 
 $schooltrip1 = new Schooltrip('pretpark HappyLand');
 $schooltrip1->addSchoolTripList($schooltripList1);
 
-print $student1->getName();
+print $student1->getName(). '<br>';
+print $student1->getPayment(). '<br>';
+print $student1->getGroup(). '<br>';
+print $schooltripList1->getSchooltripList();

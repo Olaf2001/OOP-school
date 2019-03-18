@@ -16,4 +16,9 @@ class Schooltrip
     {
         $this->tripList[] = $schooltripList;
     }
+
+    public function getSchooltrip()
+    {
+        return $this->name;
+    }
 }

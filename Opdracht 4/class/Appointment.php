@@ -25,9 +25,9 @@ class Appointment
     
     public function getTimeInterval()
     {
-        $this->timeInterval = (strtotime($this->endTime) - strtotime($this->startTime)) / 3600;
+        $timeInterval = (strtotime($this->endTime) - strtotime($this->startTime)) / 3600;
 
-        return $this->timeInterval;
+        return $timeInterval;
     }
 
     public function getAppointment()

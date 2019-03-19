@@ -20,7 +20,7 @@ class SchooltripList
     public function getSchooltripList()
     {
         $print = '';
-        $studentsToList = 2;
+        $studentsToList = 25;
 
         if(count($this->studentList) < $studentsToList) {
 

@@ -35,7 +35,4 @@ $schooltripList1->addTeacher($teacher1->getName());
 $schooltrip1 = new Schooltrip('pretpark HappyLand');
 $schooltrip1->addSchoolTripList($schooltripList1);
 
-print $student1->getName(). '<br>';
-print $student1->getPayment(). '<br>';
-print $student1->getGroup(). '<br>';
-print $schooltripList1->getSchooltripList();
+print $schooltrip1->getSchooltrip();

@@ -19,6 +19,12 @@ class Schooltrip
 
     public function getSchooltrip()
     {
-        return $this->name;
+        $print = '';
+
+        foreach ($this->tripList as $schooltripList) {
+            $print .= $schooltripList->getSchooltripList().'<br';
+        }
+
+        return '<strong>'.$this->name.'</strong><br>'.$print;
     }
 }

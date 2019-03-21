@@ -8,21 +8,13 @@ use OOP_basis_Opdracht_5\Group;
 use OOP_basis_Opdracht_5\Schooltrip;
 use OOP_basis_Opdracht_5\SchooltripList;
 
-$student1 = new Student('Giel','Houtepen');
-$student1->setPayment(5);
-$student2 = new Student('Jochem','Wortel');
-$student1->setPayment();
-$student3 = new Student('Dirk','de Beer');
-$student1->setPayment(10);
-
 $group1 = new Group('APM2A');
 
-$group1->addStudent($student1);
-$student1->addGroup($group1->getGroupName());
-$group1->addStudent($student2);
-$student2->addGroup($group1->getGroupName());
-$group1->addStudent($student3);
-$student3->addGroup($group1->getGroupName());
+$student1 = new Student('Giel','Houtepen', $group1->getGroupName(), 5);
+$student2 = new Student('Jochem','Wortel', $group1->getGroupName());
+$student3 = new Student('Dirk','de Beer', $group1->getGroupName(), 10);
+
+$group1->addStudent([$student1, $student2, $student3]);
 
 $teacher1 = new Teacher('Jan','Slim');
 
@@ -33,6 +25,7 @@ $schooltripList1->addStudent($student3);
 $schooltripList1->addTeacher($teacher1->getName());
 
 $schooltrip1 = new Schooltrip('pretpark HappyLand');
+$schooltrip1->addSchoolTripList($schooltripList1);
 $schooltrip1->addSchoolTripList($schooltripList1);
 
 print $schooltrip1->getSchooltrip();

@@ -4,8 +4,8 @@ namespace OOP_basis_Opdracht_5;
 
 abstract class Person
 {
-    protected $firstname;
-    protected $lastname;
+    private $firstname;
+    private $lastname;
 
     public function __construct($firstname, $lastname)
     {

@@ -7,14 +7,12 @@ class Student extends Person
     private $paid;
     private $className;
 
-    public function setPayment($paid = 'nog niet betaald')
+    public function __construct($firstname, $lastname, $className, $paid = '0 (nog niet betaald)')
     {
-        $this->paid = $paid;
-    }
-
-    public function addGroup($className)
-    {
+        parent::__construct($firstname, $lastname);
         $this->className = $className;
+        $this->paid = $paid;
+
     }
 
     public function getPayment()

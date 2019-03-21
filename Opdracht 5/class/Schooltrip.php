@@ -20,11 +20,15 @@ class Schooltrip
     public function getSchooltrip()
     {
         $print = '';
+        $listNumber = 0;
 
-        foreach ($this->tripList as $schooltripList) {
-            $print .= $schooltripList->getSchooltripList().'<br';
+        foreach ($this->tripList as $schooltripList)
+        {
+            $listNumber++;
+
+            $print .= '<table border="1"><thead><tr><th colspan="3">lijst:'.$listNumber.'</th>'.$schooltripList->getSchooltripList().'</table>';
         }
 
-        return '<strong>'.$this->name.'</strong><br>'.$print;
+        return '<strong>'.$this->name.'</strong>'.$print;
     }
 }

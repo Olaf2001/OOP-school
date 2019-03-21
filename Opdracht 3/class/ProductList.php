@@ -17,14 +17,15 @@ class ProductList
 
         foreach ($this->products as $product)
         {
-            $print .= $product->getProduct()."<br>";
+            $print .= $product->getProduct();
         }
 
         return '<table border="1">
                     <tr>
                         <th>Product Naam</th>
                         <th>Verkoopprijs</th>
-                        <th>Categorie</th>'
+                        <th>Categorie</th>
+                    </tr>'
                     .$print.
                 '</table>';
     }

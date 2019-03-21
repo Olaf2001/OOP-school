@@ -19,6 +19,6 @@ abstract class Product
 
     public function getProduct()
     {
-        return '<tr><td>'.$this->productName.'</td><td>&euro; '.$this->sellingPrice.'</td><td>'.$this->category;
+        return '<tr><td>'.$this->productName.'</td><td>&euro; '.$this->sellingPrice.'</td><td>'.$this->category.'</td></tr>';
     }
 }

@@ -22,8 +22,10 @@ class SchooltripList
         $print = '';
         $studentsToList = 25;
 
-        if(count($this->studentList) < $studentsToList) {
-            foreach ($this->studentList as $student) {
+        if(count($this->studentList) < $studentsToList)
+        {
+            foreach ($this->studentList as $student)
+            {
                 $print .= '<tr><td>'.$student->getName().'</td><td>'.$student->getGroup().'</td><td>&euro; '.$student->getPayment().'</td></tr>';
             }
 
@@ -40,7 +42,8 @@ class SchooltripList
                       </tr>';
         }
 
-        else {
+        else 
+        {
             $studentsToMuch = count($this->studentList) - $studentsToList;
 
             return  'een lijst mag maar '.$studentsToList.' studenten bevatten en in deze lijst zitten er '

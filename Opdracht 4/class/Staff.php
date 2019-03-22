@@ -5,10 +5,10 @@ namespace OOP_basis;
 abstract class Staff extends Person
 {
     protected $salaryHour;
-    private $appointmentTime;
     protected $appointmentTotalTime = [];
 
-    public function __construct($firstname, $lastname, $eyeColor, $hairColor, $length, $weight, $salaryHour) {
+    public function __construct($firstname, $lastname, $eyeColor, $hairColor, $length, $weight, $salaryHour)
+    {
         parent::__construct($firstname, $lastname, $eyeColor, $hairColor, $length, $weight);
 
         $this->salaryHour = $salaryHour;

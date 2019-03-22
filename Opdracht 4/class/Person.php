@@ -19,11 +19,12 @@ abstract class Person
         $this->hairColor = $hairColor;
         $this->length = $length;
         $this->weight = $weight;
+
+        $this->setRole();
     }
 
     public function getPerson()
     {
-        $this->setRole();
         return $this->role.' <i>'.$this->firstname.' '.$this->lastname.'</i>';
     }
 
